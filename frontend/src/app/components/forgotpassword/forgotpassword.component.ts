@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { AuthenticationService } from '../services/authenticate.service';
+import { AuthenticationService } from '../../services/authenticate.service';
 import { ToastrService } from 'ngx-toastr';
 import { ActivatedRoute } from '@angular/router';
 @Component({
@@ -16,7 +16,7 @@ export class ForgotpasswordComponent implements OnInit {
   switchToLoginPage = true;
   errorMessage = '';
     password: '';
-  constructor(private loginservice: AuthenticationService,private toastr: ToastrService) { }
+  constructor(private router: Router,private loginservice: AuthenticationService,private toastr: ToastrService) { }
 
   ngOnInit() {
   
@@ -42,6 +42,7 @@ export class ForgotpasswordComponent implements OnInit {
                         {   
                             this.invalidLogin = false;
                             this.toastr.info('Successully updated');
+                            this.router.navigate(['login'])
                         }
                         else
                         {

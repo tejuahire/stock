@@ -10,7 +10,7 @@ import { ViewComponent } from './components/view/view.component';
 import { MySharesComponent } from './components/my-shares/my-shares.component';
 import { LogoutComponent } from './components/logout/logout.component';
 import { UnderProgressComponent } from './components/under-progress/under-progress.component'
-import { ForgotpasswordComponent } from './forgotpassword/forgotpassword.component';
+import { ForgotpasswordComponent } from './components/forgotpassword/forgotpassword.component';
 
 export const AppRoutes: Routes = [
   { path: 'login', component: LoginComponent },
